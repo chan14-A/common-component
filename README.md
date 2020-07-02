@@ -1,1 +1,2 @@
-# common-component
+# supremind-component
+

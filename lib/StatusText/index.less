@@ -1,0 +1,38 @@
+.statusText {
+  position: relative;
+  display: block;
+  padding: 2px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+}
+
+.statusAnimation {
+  @keyframes sm-status-flash {
+    from {
+      left: -70px;
+    }
+    to {
+      left: 70px;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0)
+    );
+    position: absolute;
+    left: -70px;
+    top: -1px;
+    width: 70px;
+    height: 100%;
+    animation: sm-status-flash 2s ease 0.2s infinite normal;
+  }
+}

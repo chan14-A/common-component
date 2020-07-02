@@ -1,0 +1,130 @@
+:global {
+  .stateImg {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: #172544;
+    color: #c4c8d2;
+    overflow: hidden;
+
+    &.defaultHeight {
+      height: 160px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      cursor: pointer;
+      background-color: transparent;
+    }
+
+    &:hover::after {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    > img {
+      display: inline-block;
+      max-width: 100%;
+      max-height: 100%;
+      line-height: 0;
+      font-size: 0;
+      vertical-align: middle;
+    }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      line-height: 0;
+      font-size: 0;
+      vertical-align: middle;
+    }
+
+    a {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+    }
+
+    .anticon-fullscreen {
+      position: absolute;
+      right: 6px;
+      bottom: 6px;
+      color: #ffffff;
+      width: 16px;
+      height: 16px;
+    }
+
+    .ant-empty {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .tagdesc {
+      position: absolute;
+      height: 32px;
+      line-height: 32px;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      color: #ffffff;
+      background: rgba(45, 59, 90, 1);
+      opacity: 0.6;
+    }
+  }
+}
+
+:global(.stateImg).noImg {
+  background-color: #798295;
+}
+
+:global(.stateImg) .error,
+:global(.stateImg) .loading {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.error > div,
+.loading > div {
+  padding-top: 18px;
+}
+
+.error img {
+  width: 49px;
+  height: 45px;
+}
+
+.loading img {
+  width: 48px;
+  height: 48px;
+}
+
+.innerMagnifier {
+  display: none;
+  position: absolute;
+  background-image: url(./img/magnifier_mask.png);
+  background-repeat: repeat;
+  z-index: 1999;
+  pointer-events: none;
+}
+
+.outerMagnifier {
+  display: none;
+  position: fixed;
+  z-index: 1999;
+  overflow: hidden;
+  img {
+    position: absolute;
+  }
+}

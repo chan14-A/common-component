@@ -1,0 +1,65 @@
+.video {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  > div:first-child {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .cover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    > div:not(:global(.stateImg)) {
+      background-color: rgba(45, 59, 90, 0.7);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      color: #ffffff;
+      cursor: pointer;
+      text-align: center;
+      > div {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+    .play {
+      font-size: 18px;
+    }
+    .failed {
+      font-size: 12px;
+      i {
+        padding-bottom: 18px;
+        font-size: 54px;
+      }
+      a {
+        padding-left: 4px;
+      }
+    }
+    .loading {
+      font-size: 12px;
+      i {
+        padding-bottom: 18px;
+        font-size: 50px;
+      }
+    }
+    .blank {
+      > * {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      i {
+        font-size: 22px;
+        padding-right: 18px;
+      }
+      div {
+        font-size: 18px;
+      }
+    }
+  }
+}
