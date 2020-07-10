@@ -1,2 +1,2 @@
-# supremind-component
+# commom-component
 
